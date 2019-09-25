@@ -1,311 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>career builder</title>
-    <style>
-        * {margin: 0;padding: 0}
-        .head {
-            background-color: #07cbc9;
-            width: 100%;
-            height: 80px;
-            position: fixed;
-            top:0;
-            z-index: 1;
-        }
-        .head a img {
-            float: left;
-            padding: 16px 0 0 150px;
-        }
-        .head ul {
-            list-style: none;
-            margin-right:100px
-        }
-        .head ul li a{
-            float: right;
-            margin: 0 10px;
-            font: bold 16px/80px "microsoft yahei ui";
-            color: #fff;
-            text-decoration: none;
-        }
-        .head ul li a:hover {background-color: #60EDFA;}
-        .clear {clear: both}
-        .banner img{
-            width: 100%;
-            height: 600px;
-            margin-top:80px ;
-            }
-        .banner .toplayer {
-            width: 100%;
-            height: 600px;
-            opacity: 0.4;
-            position: absolute;
-            top: 80px;
-            background-color: #000;}
-        .banner form {
-            position:absolute;
-            left: 50%;
-            margin-left:-254px;
-            top:240px;
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>苹果手机试玩平台汇总</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link href="./index_files/css.css" rel="stylesheet">
+    <link href="./index_files/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./index_files/tz.css">
+    <link rel="apple-touch-icon" href="http://s31.nyqno.com/tz/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="http://s31.nyqno.com/tz/logo.png" "="">
 
-        }
-        .banner form div {margin: 10px 0; text-align: center}
-        .banner form div input,
-        .banner form div textarea
-        {width: 505px;border: 2px solid #808080;background-color: transparent;font: 16px "microsoft yahei ui";}
-        .banner form div input:hover,
-        .banner form div textarea:hover {border:2px solid #07cbc9}
-        .banner form div input {height: 39px;}
-        .banner form div textarea {height: 115px;}
-        .banner form div [name=send] {width: 123px;height: 39px;color:#808080}
-        .banner form div [name=send]:hover {border: none;background-color: #07cbc9;}
-        .about .about-top {text-align: center}
-        .about .about-top .big-word{font: bold 50px "microsoft yahei ui";text-align: center;margin-top: 50px}
-        .about .about-top .line {border: 1px solid #07cbc9;width: 40px;margin:30px auto}
-        .about .about-top p {color: #808080;}
-        .about .about-top p:nth-last-child(1) {margin-bottom: 30px}
-        .about .about-mid {
-            text-align: center;
-            margin: 0 10%;
-            position: relative}
-        .about .about-mid img {width:52%;}
-        .about .about-mid .left1 {
-            position:absolute;
-            top:0;
-            margin-left: 40px;
-            font: 35px "microsoft yahei ui";
-            }
-        .about .about-mid .left2 {
-            position: absolute;
-            top:102px;
-            width: 370px;
-            height: 246px;
-            border: 1px solid #808080;
-            margin-left: 40px;
-        }
-        .about .about-mid .left2 .layer {
-            width: 370px;
-            height: 246px;
-            opacity: 0.5;
-            background-color: #fff;}
-        .about .about-mid .left2 p {
-            position: absolute;
-            top:0;
-            width: 370px;
-            font:17px/24px "microsoft yahei ui";
-            text-align: left;
-            margin: 40px 20px 0;
-        }
-        .about .about-mid .left2 a {
-            display: inline-block;
-            width: 102px;
-            height: 45px;
-            background-color: #000;
-            font: 16px/45px "microsoft yahei ui";
-            color:#fff;
-            text-decoration: none;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: -23px 0 30px 20px;
-        }
-        .about .about-mid .right1 {
-            position: absolute;
-            top:0;
-            right:-30px;
-            width: 238px;
-            height: 144px;
-            font:bold 35px "microsoft yahei ui";
-            border: 1px solid #07cbc9;
-        }
-        .about .about-mid .right1 div {position: relative;top: 50%;margin-top: -50px}
-        .about .about-mid .right1 span {font: 20px "microsoft yahei ui";}
-        .about .about-mid .right1 .line {border: 1px solid #07cbc9;width: 40px;margin: 10px auto 0}
-        .about .about-mid .right2 {
-            position: absolute;
-            top:184px;
-            right:-30px;
-            width: 238px;
-            height: 144px;
-            font:bold 35px "microsoft yahei ui";
-            border: 1px solid #07cbc9;
-        }
-        .about .about-mid .right2 div {position: relative;top: 50%;margin-top: -50px}
-        .about .about-mid .right2 span {font: 20px "microsoft yahei ui";}
-        .about .about-mid .right2 .line {border: 1px solid #07cbc9;width: 40px;margin: 10px auto 0}
-        .about .about-but {margin-top: 60px;font-size:0;position: relative }
-        .about .about-but div { width: 25%;float:left;}
-        .about .about-but .intro{background-color: #07cbc9;text-align: left;min-height:337px;position: relative}
-        .about .about-but img { width: 100%;}
-        .about .about-but .title {font-size:25px;color: #fff;margin:40px 30px 15px}
-        .about .about-but .sort {font-size:14px;color: #fff;margin:15px 30px }
-        .about .about-but .art  {font-size:12px;color:#808080;margin:15px 30px }
-        .about .about-but .intro a {
-            display: inline-block;
-            width: 102px;
-            height: 45px;
-            background-color: #000;
-            font: 16px/45px "micro  soft yahei ui";
-            color:#fff;
-            text-decoration: none;
-            text-align: center;
-            position: absolute;
-            bottom: 50px;
-            right:50%;
-            margin-right: -51px;
-           }
-        .gallery  .big-word{font: bold 50px "microsoft yahei ui";text-align: center;margin-top: 50px}
-        .gallery  .line {border: 1px solid #07cbc9;width: 40px;margin:30px auto}
-        .gallery  p {color: #808080;text-align: center}
-        .gallery  p:nth-last-child(1) {margin-bottom: 30px}
-        .gallery .con {margin: 40px 7% 0}
-        .gallery .con dl div {float: left;margin:20px 10px}
-        .gallery .con dl div dt {width: 360px;height:240px;}
-        .gallery .con dl div dd {
-            width: 360px;
-            height:64px;
-            background-color: #000;
-            color:#fff;
-            text-align:left;
-            line-height:64px;
-            text-indent: 1em;
-            font-size:14px
-        }
-        .foot {
-            width: 100%;
-            height: 80px;
-            background-color: #07cbc9;
-        margin-top: 40px}
-        .foot p {text-align: center;line-height: 80px}
-    </style>
 </head>
 <body>
-    <!--这是头部导航部分-->
-    <div class="head">
-        <a href="#"><img src="images/logo.png" alt="logo"></a>
-    <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">GALLERY</a></li>
-        <li><a href="#">FACULTY</a></li>
-        <li><a href="#">EVENTS</a></li>
-        <li><a href="#">CONTACT</a></li>
-    </ul>
-    </div>
-    <div class="clear"></div>
-    <!--这是banner部分-->
-    <div class="banner">
-        <img src="images/banner3.jpg" alt="banner">
-        <div class="toplayer"></div>
-        <form action="#" name="sign-in" >
-            <div><input type="text" name="user-name" placeholder="your Name"></div>
-            <div><input type="text" name="user-name" placeholder="your Phone"></div>
-            <div><input type="text" name="user-name" placeholder="your Email"></div>
-            <div><textarea name="comment" placeholder="Write your comment here" rows="10"cols="41"></textarea></div>
-            <div><input type="button" name="send" value="send Message"></div>
-        </form>
-    </div>
-    <!--这是内容部分-->
-    <div class="about">
-        <!--这是文字部分-->
-        <div class="about-top">
-            <div class="big-word">ABOUT</div>
-            <div class="line"></div>
-            <P>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-            <P>industry.Lorem Ipum has been the industry's standard dummy</p>
-            <P>text ever since the 1500s.</P>
-        </div>
-        <!--这是图片介绍部分-->
-        <div class="about-mid">
-            <img src="images/bb3.jpg" alt="bb3">
-            <div class="left1">A WORD<br>ABOUT US</div>
-            <div class="left2">
-                <div class="layer"></div>
-                <p>Prasent dignissim viverra est,sed <br>bibendum ligula congue non.Sed ac nisl<br>et felis gravida commodo? Susoendisse<br>eget ullamcorper ipsum.Susperdisse <br>diam amet.</p>
-                <a href="#">EXPLORE</a>
-        </div>
-            <div class="right1"><div>70000
-                <div class="line"></div>
-                <span>Students</span></div></div>
-            <div class="right2">
-                <div>600
-                    <div class="line"></div>
-                    <span>Faculty</span></div>
+    <!-- 中部内容s -->
+    <div id="mainer">
+        <div class="top">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
             </div>
         </div>
-        <!--这是详细介绍部分-->
-        <div class="about-but">
-            <div><img src="images/b1.jpg" alt=""></div>
-            <div class="intro">
-                <p class="title">library </p>
-                <p class="sort">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <p class="art">Lorem Lpum has beem the industry;s standard dummy text ever since the 1500%,when an unknow printer took a galley of type and scrambled it to make atype specimen book.</p>
-                <a href="#">EXPLORE</a>
-            </div>
-            <div><img src="images/b2.jpg" alt=""></div>
-            <div class="intro">
-                <p class="title">library </p>
-                <p class="sort">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <p class="art">Lorem Lpum has beem the industry;s standard dummy text ever since the 1500%,when an unknow printer took a galley of type and scrambled it to make atype specimen book.</p>
-                <a href="#">EXPLORE</a>
-            </div>
-            <div class="clear"></div>
-            <div class="intro">
-                <p class="title">Library </p>
-                <p class="sort">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <p class="art">Lorem Lpum has beem the industry;s standard dummy text ever since the 1500%,when an unknow printer took a galley of type and scrambled it to make atype specimen book.</p><a href="#">EXPLORE</a>
-                <a href="#">EXPLORE</a>
-            </div>
-            <div><img src="images/b3.jpg" alt=""></div>
-            <div class="intro">
-                <p class="title">library </p>
-                <p class="sort">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <p class="art">Lorem Lpum has beem the industry;s standard dummy text ever since the 1500%,when an unknow printer took a galley of type and scrambled it to make atype specimen book.</p>
-                <a href="#">EXPLORE</a>
-            </div>
-            <div><img src="images/b4.jpg" alt=""></div>
+        <div class="tongzhi" id="container">
+            <div id="content" style="left: -1006px;">温馨提示：以下列表里所有的平台都需要做，一个平台一天赚10块，10个就是100块，20个就是200，大家从平台1开始看里面的教程就知道怎么操作了，很简单的，记住每个平台都做哦!</div>
         </div>
-    </div>
-    <div class="clear"></div>
-    <div class="gallery">
-        <div class="big-word">GALLERY</div>
-        <div class="line"></div>
-        <P>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-        <P>industry.Lorem Ipum has been the industry's standard dummy text </p>
-        <P>ever since the 1500s.</P>
-        <div class="con">
-            <dl>
-                <div>
-                    <dt><img src="images/03-01.jpg" alt="images"></dt>
-                    <dd>SCIENCE LAB</dd>
-                </div>
-                <div>
-                    <dt><img src="images/03-02.jpg" alt="images"></dt>
-                    <dd> INDOOR STADIUM</dd>
-                </div>
-                <div>
-                    <dt><img src="images/03-03.jpg" alt="images"></dt>
-                    <dd>TRANSPORTATION</dd>
-                </div>
-                <div>
-                    <dt><img src="images/03-04.jpg" alt="images"></dt>
-                    <dd>KIDS ROOM</dd>
-                </div>
-                <div>
-                    <dt><img src="images/03-05.jpg" alt="images"></dt>
-                    <dd>MEDITATION CLASSES</dd>
-                </div>
-                <div>
-                    <dt><img src="images/03-06.jpg" alt="images"></dt>
-                    <dd>KIDS PLAY GROUND</dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <!--这是底部-->
-    <div class="foot">
-        <p>&copy; 2016 imooc.com 京ICP备13046642号</p>
-    </div>
-</body>
-</html>
+        <ul class="classify_list">                        
+                        <div class="clear"></div>
+                    
+                
+        </ul>
+
+        <ul class="classify_list">
+<li>
+               <a href="https://xiaoxiao517.com/?u=54866925">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P6240943240-L.png" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台1-钱咖</h4>
+                            <span>1.8-3.2元，支付宝、微信10元可提现，提现秒到，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="https:www.eimoney.com/diamonds/mobile/share/link?promote_code=4723066">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P51Z00I60-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台2-爱钱</h4>
+                            <span>任务1.3元起，支持安卓及iOS，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://wx.xy599.com/share.php?id=18702554">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5151G4470-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台3-小鱼赚钱</h4>
+                            <span>注册即送4元红包，任务1元起，下午任务多，做任务前绑定微信、手机，支持iOS和安卓，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://pp.ppsuoping.com/?random=1122&r=824408119">
+                        <img width="60" class="lazy"  alt="" src="./index_files/1-1P51R033280-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台4-pp钱包</h4>
+                            <span>注册即送红包，任务多，支付宝/微信提现秒到，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://webs.i90ba.com/share.html?id=10881414&sf=ios&sfrom=ios">
+                        <img width="60" class="lazy"  alt="" src="./index_files/1-1P5151K9200-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台5-豆豆趣玩</h4>
+                            <span>新用户加入还有6元现金大奖。安卓用户填写邀请码S10881414，立得5元。试玩APP获得高收益，每试玩一个APP可获得1元现金奖励的收益。随时可提现，10元就能微信提现秒到账。 不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://www.miquapp.com/Share?u=czoxNjoiMzQ3NjgsMTUyOTQ4OTI4NiI7">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1M5151I3170-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台6-米赚</h4>
+                            <span>苹果专享，试玩应用1-3元，任务一般晚上9点更新。不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://tg.topasm.com?u=7948952&e=340">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5151P51B64.png" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台7-掉钱眼儿</h4>
+                            <span>填写邀请码 7948952 先领2元现金红包，仅限苹果用户。试玩一款应用1-3元，任务一般晚上9点更新。不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://m.qianmaiap.com/?u=262465">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5152119530-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台8-钱脉</h4>
+                            <span>每单1元起，下午任务多，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://qz.fanfanx.cn/download?fromuid=2005655">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5151I3170-L.jpg" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台9-天天钱庄</h4>
+                            <span>填验证码即送新手红包2元，每单1-3元，不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://lm.mdashi.cn/u/2615715.html">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5152114320-L.png" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台10-懒猫</h4>
+                            <span>应用奖励1元起，10元即可提现。不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+<a href="http://m.apptry100.cn/?u=30276447">
+                        <img width="60" class="lazy" alt="" src="./index_files/1-1P5151PU00-L.png" style="display: block;">
+                        <div class="title">
+                            <h4>试玩平台11-秒赚大钱</h4>
+                            <span>注册即送1.5元，任务0.8元起，下午任务多，支付宝10元可提. 不会做的加客服微信：tangzhuanqian188 咨询</span>
+                        </div>
+                        <div class="jiaru">
+                            加入
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+					</li></ul></div>    
+
+        
+        
+        
+    
+    <!-- 中部内容e -->
+    <script src="./index_files/jquery-1.10.2.min.js"></script>
+    <script src="./index_files/jquery.lazyload.min.js"></script>
+    <script src="./index_files/swiper.min.js"></script>
+    <script>
+       $(function () {
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
+        });
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplay: 1500
+        });
+        if (!window.rollWord) {
+            var rollWord = {
+                container: document.getElementById("container"),
+                content: document.getElementById("content"),
+                _containerWidth: 1,
+                _contentWidth: 1,
+                _speed: 1,
+                setSpeed: function (opt) {
+                    var This = this;
+                    This._speed = opt;
+                },
+                setContainerWidth: function () {
+                    var This = this;
+                    This._containerWidth = This.container.offsetWidth;
+                },
+                setContentWidth: function () {
+                    var This = this;
+                    This._contentWidth = This.content.offsetWidth;
+                },
+                roll: function () {
+                    var This = this;
+                    This.content.style.left = parseInt(This._containerWidth) + "px";
+                    var time = setInterval(function () { This.move() }, 40);
+                    This.container.onmouseover = function () {
+                        clearInterval(time);
+                    };
+                    This.container.onmouseout = function () {
+                        time = setInterval(function () { This.move() }, 40);
+                    };
+                },
+                move: function () {
+                    var This = this;
+                    if (parseInt(This.content.style.left) + This._contentWidth > 0) {
+                        This.content.style.left = parseInt(This.content.style.left) - This._speed + "px";
+                    }
+                    else {
+                        This.content.style.left = parseInt(This._containerWidth) + "px";
+                    }
+                },
+                init: function (opt) {
+                    var This = this;
+                    var speed = opt.speed || 1;
+                    This.setSpeed(speed);
+                    This.setContainerWidth();
+                    This.setContentWidth();
+                    This.roll();
+                }
+            }
+        }
+        rollWord.init({ speed: 2 });
+    </script>
+
+</body></html>
+
+
+
+
